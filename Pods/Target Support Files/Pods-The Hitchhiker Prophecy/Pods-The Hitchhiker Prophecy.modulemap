@@ -1,0 +1,6 @@
+framework module Pods_The_Hitchhiker_Prophecy {
+  umbrella header "Pods-The Hitchhiker Prophecy-umbrella.h"
+
+  export *
+  module * { export * }
+}
