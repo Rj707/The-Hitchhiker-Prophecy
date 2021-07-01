@@ -49,6 +49,20 @@ extension Characters.Search {
     struct Results: Codable {
         let offset, limit, total, count: Int
         var results: [Character]
+        
+        func toHomeSceneViewMode() -> [HomeScene.Search.ViewModel] {
+            
+            var vmArray = [HomeScene.Search.ViewModel]()
+            
+            for result in results {
+                
+                let vm = HomeScene.Search.ViewModel.init(name: result.name, desc: result.resultDescription, imageUrl: result.thumbnail.path + "." + result.thumbnail.thumbnailExtension, comics: "", series: "", stories: "", events: "")
+                vmArray.append(vm)
+            }
+            
+            return vmArray
+        }
+        
     }
 }
 // MARK: - Character
