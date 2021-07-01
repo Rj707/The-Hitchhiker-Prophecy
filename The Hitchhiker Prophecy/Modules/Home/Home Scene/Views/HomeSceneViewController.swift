@@ -13,7 +13,8 @@ class HomeSceneViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private weak var characterCollectionView: UICollectionView!
     @IBOutlet private weak var collectionViewLayout: UICollectionViewFlowLayout!
-    
+    @IBOutlet private weak var noDataLabel: UILabel!
+
     var interactor: HomeSceneBusinessLogic?
     var router: HomeSceneRoutingLogic?
     
@@ -254,6 +255,8 @@ extension HomeSceneViewController: HomeSceneDisplayView {
         
         DispatchQueue.main.async {
             self.characterCollectionView.reloadData()
+            self.characterCollectionView.isHidden = false
+            self.noDataLabel.isHidden = true
         }
     }
     
@@ -261,5 +264,8 @@ extension HomeSceneViewController: HomeSceneDisplayView {
         
         // TODO: Implement
         
+        self.characterCollectionView.isHidden = true
+        self.noDataLabel.isHidden = false
+
     }
 }

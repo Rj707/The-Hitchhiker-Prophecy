@@ -42,7 +42,7 @@
 		A1A0D7A92686351C0013531C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0D7A82686351C0013531C /* String+Extensions.swift */; };
 		A1C439FD268A349B0016C5FA /* HomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C439FB268A349B0016C5FA /* HomeSceneViewController.swift */; };
 		A1C439FE268A349B0016C5FA /* HomeSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C439FC268A349B0016C5FA /* HomeSceneViewController.xib */; };
-		A1C43A04268A3D620016C5FA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C43A03268A3D620016C5FA /* Storyboard.storyboard */; };
+		A1C43A04268A3D620016C5FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C43A03268A3D620016C5FA /* Main.storyboard */; };
 		A9F01E9524E1ED350034ABB9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F01E9424E1ED350034ABB9 /* ThemeManager.swift */; };
 		A9F01E9724E1ED9B0034ABB9 /* AppLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F01E9624E1ED9B0034ABB9 /* AppLibraryManager.swift */; };
 		A9F01E9924E1EE560034ABB9 /* AppWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F01E9824E1EE560034ABB9 /* AppWindowManager.swift */; };
@@ -101,7 +101,7 @@
 		A1A0D7A82686351C0013531C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A1C439FB268A349B0016C5FA /* HomeSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneViewController.swift; sourceTree = "<group>"; };
 		A1C439FC268A349B0016C5FA /* HomeSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSceneViewController.xib; sourceTree = "<group>"; };
-		A1C43A03268A3D620016C5FA /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		A1C43A03268A3D620016C5FA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A9F01E9424E1ED350034ABB9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A9F01E9624E1ED9B0034ABB9 /* AppLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLibraryManager.swift; sourceTree = "<group>"; };
 		A9F01E9824E1EE560034ABB9 /* AppWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowManager.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				76A9C3BC24A40C93001E707F /* Modules */,
 				019ACF8424926512003E3ECF /* Domain */,
 				019ACF7924925BFC003E3ECF /* Networking */,
-				A1C43A03268A3D620016C5FA /* Storyboard.storyboard */,
+				A1C3C75F268DD6CC004DC33C /* Storyboard */,
 			);
 			path = "The Hitchhiker Prophecy";
 			sourceTree = "<group>";
@@ -307,6 +307,14 @@
 				76C7AE4E249803460053EF25 /* HomeCharacterCollectionViewCell.xib */,
 			);
 			path = "Home Character CollectionViewCell";
+			sourceTree = "<group>";
+		};
+		A1C3C75F268DD6CC004DC33C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A1C43A03268A3D620016C5FA /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		A9F01E9324E1ED270034ABB9 /* Managers */ = {
@@ -459,7 +467,7 @@
 				A17CBF792689D28A000D4008 /* HomeCharacterCollectionViewCell.xib in Resources */,
 				01D65F69249138AD0082F8FF /* Assets.xcassets in Resources */,
 				A1C439FE268A349B0016C5FA /* HomeSceneViewController.xib in Resources */,
-				A1C43A04268A3D620016C5FA /* Storyboard.storyboard in Resources */,
+				A1C43A04268A3D620016C5FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

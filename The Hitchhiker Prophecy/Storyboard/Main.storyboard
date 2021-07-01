@@ -41,9 +41,17 @@
                                     <outlet property="delegate" destination="5SX-7h-DgB" id="GbR-hZ-He6"/>
                                 </connections>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Character found!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEN-Kf-HrA">
+                                <rect key="frame" x="20" y="438" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-eh-3IT">
                                 <rect key="frame" x="291" y="44" width="103" height="30"/>
-                                <state key="normal" title="Change Layout"/>
+                                <state key="normal" title="Change Layout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="changeLayoutButtontouched:" destination="5SX-7h-DgB" eventType="touchUpInside" id="Wp5-dx-qli"/>
                                 </connections>
@@ -54,9 +62,13 @@
                         <constraints>
                             <constraint firstItem="oW3-kS-o1M" firstAttribute="leading" secondItem="1k6-cL-fvO" secondAttribute="leading" id="4lr-xj-StP"/>
                             <constraint firstItem="1k6-cL-fvO" firstAttribute="trailing" secondItem="qF6-eh-3IT" secondAttribute="trailing" constant="20" id="Elh-fm-9tw"/>
+                            <constraint firstItem="LEN-Kf-HrA" firstAttribute="centerX" secondItem="xpC-1g-5mz" secondAttribute="centerX" id="LsX-hx-iOG"/>
                             <constraint firstItem="qF6-eh-3IT" firstAttribute="top" secondItem="1k6-cL-fvO" secondAttribute="top" id="LtA-cE-ZqQ"/>
                             <constraint firstItem="1k6-cL-fvO" firstAttribute="trailing" secondItem="oW3-kS-o1M" secondAttribute="trailing" id="Ncq-Uf-D6F"/>
+                            <constraint firstItem="LEN-Kf-HrA" firstAttribute="centerY" secondItem="xpC-1g-5mz" secondAttribute="centerY" id="QJi-XF-GI8"/>
+                            <constraint firstItem="1k6-cL-fvO" firstAttribute="trailing" secondItem="LEN-Kf-HrA" secondAttribute="trailing" constant="20" id="VqB-N2-0Zn"/>
                             <constraint firstItem="1k6-cL-fvO" firstAttribute="bottom" secondItem="oW3-kS-o1M" secondAttribute="bottom" id="bly-6u-y4f"/>
+                            <constraint firstItem="LEN-Kf-HrA" firstAttribute="leading" secondItem="1k6-cL-fvO" secondAttribute="leading" constant="20" id="cvc-Lw-C93"/>
                             <constraint firstItem="oW3-kS-o1M" firstAttribute="top" secondItem="qF6-eh-3IT" secondAttribute="bottom" constant="8" id="qhN-fj-Ej2"/>
                         </constraints>
                     </view>
@@ -65,6 +77,7 @@
                     <connections>
                         <outlet property="characterCollectionView" destination="oW3-kS-o1M" id="9xi-Om-uIX"/>
                         <outlet property="collectionViewLayout" destination="4Tc-GQ-FxY" id="vDq-Jh-GVi"/>
+                        <outlet property="noDataLabel" destination="LEN-Kf-HrA" id="bci-kd-ccK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giI-Ox-C7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

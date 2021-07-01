@@ -10,7 +10,7 @@ import UIKit
 
 enum HomeSceneConfigurator {
     static func configure() -> UINavigationController {
-        let sb = UIStoryboard.init(name: "Storyboard", bundle: nil)
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
         let viewController = sb.instantiateViewController(identifier: "HomeSceneViewController") as! HomeSceneViewController
         let presenter = HomeScenePresneter(displayView: viewController)
         let worker = HomeSearchWorker()
