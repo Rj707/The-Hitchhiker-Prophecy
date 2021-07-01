@@ -17,9 +17,20 @@ class HomeCharacterCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         characterImageView.layer.cornerRadius = 8
         characterImageView.clipsToBounds = true
+        
     }
     
     // MARK: - Setup
+    
+    class func cellForCollectionView(collectionView: UICollectionView, atIndexPath indexPath: IndexPath) -> HomeCharacterCollectionViewCell {
+        
+        let kHomeCollectionCell = "HomeCharacterCollectionViewCell"
+        collectionView.register(UINib(nibName:"HomeCharacterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kHomeCollectionCell)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kHomeCollectionCell, for: indexPath) as! HomeCharacterCollectionViewCell
+        return cell
+    }
+    
+    
     func configure(with viewModel: HomeScene.Search.ViewModel) {
         characterNameLabel.text = viewModel.name
         if let url = URL(string: viewModel.imageUrl) {
