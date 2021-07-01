@@ -10,7 +10,7 @@ import UIKit
 
 final class HomeSceneRouter: HomeSceneDataPassing {
     // MARK: - Stored properties
-    weak var viewController: (HomeSceneDisplayView & UIViewController)?
+    var viewController: (HomeSceneDisplayView & UIViewController)?
     var dataStore: HomeSceneDataStore?
 }
 
