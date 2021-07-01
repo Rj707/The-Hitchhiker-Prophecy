@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5SX-7h-DgB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Scene View Controller-->
+        <scene sceneID="NLB-37-S2K">
+            <objects>
+                <viewController storyboardIdentifier="HomeSceneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5SX-7h-DgB" customClass="HomeSceneViewController" customModule="The_Hitchhiker_Prophecy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xpC-1g-5mz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-kS-o1M">
+                                <rect key="frame" x="0.0" y="82" width="414" height="780"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Tc-GQ-FxY">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qXe-Hk-WtL">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rPL-65-FF6">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5SX-7h-DgB" id="7rN-nq-xt9"/>
+                                    <outlet property="delegate" destination="5SX-7h-DgB" id="GbR-hZ-He6"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-eh-3IT">
+                                <rect key="frame" x="291" y="44" width="103" height="30"/>
+                                <state key="normal" title="Change Layout"/>
+                                <connections>
+                                    <action selector="changeLayoutButtontouched:" destination="5SX-7h-DgB" eventType="touchUpInside" id="Wp5-dx-qli"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1k6-cL-fvO"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.10980392156862745" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oW3-kS-o1M" firstAttribute="leading" secondItem="1k6-cL-fvO" secondAttribute="leading" id="4lr-xj-StP"/>
+                            <constraint firstItem="1k6-cL-fvO" firstAttribute="trailing" secondItem="qF6-eh-3IT" secondAttribute="trailing" constant="20" id="Elh-fm-9tw"/>
+                            <constraint firstItem="qF6-eh-3IT" firstAttribute="top" secondItem="1k6-cL-fvO" secondAttribute="top" id="LtA-cE-ZqQ"/>
+                            <constraint firstItem="1k6-cL-fvO" firstAttribute="trailing" secondItem="oW3-kS-o1M" secondAttribute="trailing" id="Ncq-Uf-D6F"/>
+                            <constraint firstItem="1k6-cL-fvO" firstAttribute="bottom" secondItem="oW3-kS-o1M" secondAttribute="bottom" id="bly-6u-y4f"/>
+                            <constraint firstItem="oW3-kS-o1M" firstAttribute="top" secondItem="qF6-eh-3IT" secondAttribute="bottom" constant="8" id="qhN-fj-Ej2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JuZ-8i-QhR"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="characterCollectionView" destination="oW3-kS-o1M" id="9xi-Om-uIX"/>
+                        <outlet property="collectionViewLayout" destination="4Tc-GQ-FxY" id="vDq-Jh-GVi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giI-Ox-C7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582.60869565217399" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+</document>
